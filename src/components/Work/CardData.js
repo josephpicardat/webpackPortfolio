@@ -1,57 +1,3 @@
-import RecipeIO from '../../assets/recipeIO.png';
-import Gifter from '../../assets/gifter.png';
-import FlexBoxIO from '../../assets/flexboxIO.png';
-import EmployeeIO from '../../assets/EmployeeIO.png';
-import NoteTakerIO from '../../assets/NoteTakerIO.png';
-import SocialNetworkIO from '../../assets/SocialNetworkIO.png';
-import TarotDeck from '../../assets/TarotDeck.png';
-import README_Generator from '../../assets/Readme_Generator.png';
-
-// PeaceofMind imports
-import PeaceofMind from '../../assets/PeaceofMindV2/peaceOfMindv2.png';
-import x43_about from '../../assets/PeaceofMindV2/x43_about.png';
-import x43_post_comment from '../../assets/PeaceofMindV2/x43_post_comment.png';
-import full_community from '../../assets/PeaceofMindV2/full_community.png';
-import full_dashboard from '../../assets/PeaceofMindV2/full_dashboard.png';
-import full_landing from '../../assets/PeaceofMindV2/full_landing.png';
-import full_post_comments from '../../assets/PeaceofMindV2/full_post_comments.png';
-import full_signup from '../../assets/PeaceofMindV2/full_signup.png';
-import full_single_post from '../../assets/PeaceofMindV2/full_single_post.png';
-
-// RecipeIO imports
-import MainMenu from '../../assets/RecipeIO/MainMenu.png';
-import Recipe from '../../assets/RecipeIO/Recipe.png';
-
-// Gifter imports
-import preview from '../../assets/Gifter/preview.png';
-import gifter from '../../assets/Gifter/gifter.png';
-
-// FlexboxIO imports
-import align_content from '../../assets/FlexboxIO/align_content.png';
-import align_items from '../../assets/FlexboxIO/align_items.png';
-import align_self from '../../assets/FlexboxIO/align_self.png';
-import flex_shrink from '../../assets/FlexboxIO/flex_shrink.png';
-import justify_content from '../../assets/FlexboxIO/justify_content.png';
-import navbar from '../../assets/FlexboxIO/navbar.png';
-
-// TarotDeck
-import dashboard from '../../assets/TarotDeck/dashboard.png';
-import newReading from '../../assets/TarotDeck/newReading.png';
-import reading from '../../assets/TarotDeck/reading.png';
-import settings from '../../assets/TarotDeck/settings.png';
-
-// EmployeeIO
-
-//NoteTakerIO
-import clean_note from '../../assets/NoteTakerIO/clean_note.png';
-import hello_note from '../../assets/NoteTakerIO/hello_note.png';
-import new_note from '../../assets/NoteTakerIO/new_note.png';
-
-// SocialNetworkIO
-import All_thoughts from '../../assets/SocialNetworkIO/All_thoughts.png';
-import all_users from '../../assets/SocialNetworkIO/all_users.png';
-import create_new_thought from '../../assets/SocialNetworkIO/create_new_thought.png';
-
 const cardData = [
     {
         id: 1,
@@ -59,38 +5,45 @@ const cardData = [
         subtitle: 'Mental Health Social Media App',
         description:
             'Peace of Mind is a website that will allow anyone with a need to connect to others regarding mental health and support. We provide a safe space for everyone to discuss their feelings without fear of retaliation.',
-        image: PeaceofMind,
+        image: () => import('../../assets/PeaceofMindV2/peaceOfMindv2.png'),
         imageArray: [
             {
-                path: full_landing,
+                path: () =>
+                    import('../../assets/PeaceofMindV2/full_landing.png'),
                 alt: 'Landing Page',
             },
             {
-                path: full_signup,
+                path: () =>
+                    import('../../assets/PeaceofMindV2/full_signup.png'),
                 alt: 'SignUp Page',
             },
             {
-                path: full_dashboard,
+                path: () =>
+                    import('../../assets/PeaceofMindV2/full_dashboard.png'),
                 alt: 'Dashboard Page',
             },
             {
-                path: full_community,
+                path: () =>
+                    import('../../assets/PeaceofMindV2/full_community.png'),
                 alt: 'Community Page',
             },
             {
-                path: full_single_post,
+                path: () =>
+                    import('../../assets/PeaceofMindV2/full_single_post.png'),
                 alt: 'Single Post',
             },
             {
-                path: full_post_comments,
+                path: () =>
+                    import('../../assets/PeaceofMindV2/full_post_comments.png'),
                 alt: 'Post with comments',
             },
             {
-                path: x43_post_comment,
+                path: () =>
+                    import('../../assets/PeaceofMindV2/x43_post_comment.png'),
                 alt: 'Post Comment Page',
             },
             {
-                path: x43_about,
+                path: () => import('../../assets/PeaceofMindV2/x43_about.png'),
                 alt: 'About Page',
             },
         ],
@@ -104,14 +57,14 @@ const cardData = [
         subtitle: 'Recipe Search Engine',
         description:
             'Recipe IO is a application that uses mysql2 to store users recipes and recipe books.',
-        image: RecipeIO,
+        image: () => import('../../assets/recipeIO.png'),
         imageArray: [
             {
-                path: MainMenu,
+                path: () => import('../../assets/RecipeIO/MainMenu.png'),
                 alt: 'Login Page',
             },
             {
-                path: Recipe,
+                path: () => import('../../assets/RecipeIO/Recipe.png'),
                 alt: 'Recipe Example',
             },
         ],
@@ -125,14 +78,14 @@ const cardData = [
         subtitle: 'Gift Card Reminder Website',
         description:
             'A calendar application that sends gift cards to friends and family. It also a remind app.',
-        image: Gifter,
+        image: () => import('../../assets/gifter.png'),
         imageArray: [
             {
-                path: preview,
+                path: () => import('../../assets/Gifter/preview.png'),
                 alt: 'Example Reminder',
             },
             {
-                path: gifter,
+                path: () => import('../../assets/Gifter/gifter.png'),
                 alt: 'Main Page',
             },
         ],
@@ -146,30 +99,31 @@ const cardData = [
         subtitle: 'A Flexbox Playground',
         description:
             'An react application that is designed to give the user an easy understanding of the properties of the flex container and flex items alike.',
-        image: FlexBoxIO,
+        image: () => import('../../assets/flexboxIO.png'),
         imageArray: [
             {
-                path: align_content,
+                path: () => import('../../assets/FlexboxIO/align_content.png'),
                 alt: 'Align Content Page',
             },
             {
-                path: align_items,
+                path: () => import('../../assets/FlexboxIO/align_items.png'),
                 alt: 'Align Items Page',
             },
             {
-                path: align_self,
+                path: () => import('../../assets/FlexboxIO/align_self.png'),
                 alt: 'Align Self Page',
             },
             {
-                path: flex_shrink,
+                path: () => import('../../assets/FlexboxIO/flex_shrink.png'),
                 alt: 'Flex Shrink Page',
             },
             {
-                path: justify_content,
+                path: () =>
+                    import('../../assets/FlexboxIO/justify_content.png'),
                 alt: 'Justify Content Post',
             },
             {
-                path: navbar,
+                path: () => import('../../assets/FlexboxIO/navbar.png'),
                 alt: 'Navbar',
             },
         ],
@@ -183,22 +137,22 @@ const cardData = [
         subtitle: 'Embrace Clarity: Tarot Card Readings Made Simple',
         description:
             'Embark on a journey of reflection and fun with the Tarot Deck app—a digital twist on the ancient practice of tarot readings. Our app offers users a unique opportunity to explore various tarot spreads, delve into the meanings of the cards, and gain personal insights, all with a touch of a button.',
-        image: TarotDeck,
+        image: () => import('../../assets/TarotDeck.png'),
         imageArray: [
             {
-                path: dashboard,
+                path: () => import('../../assets/TarotDeck/dashboard.png'),
                 alt: 'Dashboard',
             },
             {
-                path: newReading,
+                path: () => import('../../assets/TarotDeck/newReading.png'),
                 alt: 'New Tarot Reading',
             },
             {
-                path: reading,
+                path: () => import('../../assets/TarotDeck/reading.png'),
                 alt: 'Previous Readings',
             },
             {
-                path: settings,
+                path: () => import('../../assets/TarotDeck/settings.png'),
                 alt: 'Settings Page',
             },
         ],
@@ -212,10 +166,10 @@ const cardData = [
         subtitle: 'Employee Management Terminal with MYSQL',
         description:
             'Your comprehensive solution for efficiently organizing and tracking employee data. Powered by MySQL, this intuitive terminal-based application offers seamless management of employee information, from departments and roles to individual employee details.',
-        image: EmployeeIO,
+        image: () => import('../../assets/EmployeeIO.png'),
         imageArray: [
             {
-                path: EmployeeIO,
+                path: () => import('../../assets/EmployeeIO.png'),
                 alt: 'Main Page',
             },
         ],
@@ -229,18 +183,18 @@ const cardData = [
         subtitle: 'A Digital Notekeeper',
         description:
             '"Introducing NoteTakerIO, your go-to digital notekeeper for capturing, organizing, and accessing your thoughts effortlessly. With NoteTakerIO, you can seamlessly jot down new notes, update existing ones, and even remove notes you no longer need. Keep your ideas at your fingertips and revisit past notes with ease.',
-        image: NoteTakerIO,
+        image: () => import('../../assets/NoteTakerIO.png'),
         imageArray: [
             {
-                path: clean_note,
+                path: () => import('../../assets/NoteTakerIO/clean_note.png'),
                 alt: 'Clean Note',
             },
             {
-                path: hello_note,
+                path: () => import('../../assets/NoteTakerIO/hello_note.png'),
                 alt: 'Hello Note',
             },
             {
-                path: new_note,
+                path: () => import('../../assets/NoteTakerIO/new_note.png'),
                 alt: 'New Note',
             },
         ],
@@ -254,18 +208,23 @@ const cardData = [
         subtitle: 'Your Backend Social Media Hub',
         description:
             'Welcome to SocialNetworkIO, your centralized backend solution for powering social media interactions. Built with NoSQL and Insomnia, SocialNetworkIO serves as the backbone for hosting your social media platform, handling user management, post creation, and comment interactions effortlessly.',
-        image: SocialNetworkIO,
+        image: () => import('../../assets/SocialNetworkIO.png'),
         imageArray: [
             {
-                path: All_thoughts,
+                path: () =>
+                    import('../../assets/SocialNetworkIO/All_thoughts.png'),
                 alt: 'All thoughts',
             },
             {
-                path: all_users,
+                path: () =>
+                    import('../../assets/SocialNetworkIO/all_users.png'),
                 alt: 'All users',
             },
             {
-                path: create_new_thought,
+                path: () =>
+                    import(
+                        '../../assets/SocialNetworkIO/create_new_thought.png'
+                    ),
                 alt: 'Create new thought',
             },
         ],
@@ -278,10 +237,10 @@ const cardData = [
         title: 'README Generator',
         subtitle: 'Your Dynamic Documentation Tool',
         description: `Introducing ReadME Generator, your ultimate solution for generating dynamic and comprehensive README documentation with ease. Whether you are working on an open-source project or collaborating with a team. ReadME Generator simplifies the process of creating, updating, and maintaining README files, ensuring clarity and accessibility for your project's users and contributors.`,
-        image: README_Generator,
+        image: () => import('../../assets/Readme_Generator.png'),
         imageArray: [
             {
-                path: README_Generator,
+                path: () => import('../../assets/Readme_Generator.png'),
                 alt: 'ReadME Generator',
             },
         ],
