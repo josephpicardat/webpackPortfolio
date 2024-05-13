@@ -1,0 +1,29 @@
+:root {
+    --blue: #05fdf8;
+    --green: #11ffa8;
+    --gradient: -webkit-linear-gradient(45deg, #05fdf8, #11ffa8);
+    --ut_gradient: -webkit-linear-gradient(#cbb5a5, #cc5500);
+    --off_white: #dcfbfa;
+    --darker_off_white: #c8e5e4;
+    --even_darker_off_white: #96b0af;
+    --background: #1f252f;
+    --grey_shadow: rgba(52, 61, 78, 0.7);
+    --lighter_background: #394053;
+    --even_lighter_background: #474f66;
+    --transparent_background: rgba(46, 55, 69, 0.75);
+    --less_transparent_background: rgba(46, 55, 69, 0.97);
+}
+
+.wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--off_white);
+    background-color: var(--background);
+}
+
+body {
+    margin: 0;
+}

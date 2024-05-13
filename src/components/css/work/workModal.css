@@ -1,0 +1,23 @@
+.titleContainer {
+    /* border: '1px #c0c0c0'; */
+    border-bottom: 'solid';
+}
+
+.cardStyle {
+    position: 'absolute';
+    top: '50%';
+    left: '50%';
+    transform: 'translate(-50%, -50%)';
+    max-width: 700;
+    background-color: 'background.paper';
+    border-radius: '3px';
+    box-shadow: 24;
+    padding: 0;
+}
+
+@media screen and (max-width: 1440) {
+    .cardStyle {
+        /* aspect-ratio: 4/3 !important; */
+        width: 700px !important;
+    }
+}

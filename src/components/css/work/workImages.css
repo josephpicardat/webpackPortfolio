@@ -1,0 +1,18 @@
+.imageBox {
+    height: 450;
+}
+
+.imageComponent {
+    height: 450;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+@media screen and (max-width: 1440) {
+    .imageBox {
+        /* aspect-ratio: 4/3 !important; */
+        height: 200px;
+    }
+}

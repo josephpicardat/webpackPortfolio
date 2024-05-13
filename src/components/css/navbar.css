@@ -1,0 +1,85 @@
+.logo {
+    max-width: 70px;
+}
+
+.css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
+    top: 94px !important;
+    position: absolute;
+}
+
+.menuIcon {
+    display: none !important;
+    color: var(--off_white) !important;
+}
+
+.menuIcon.clicked {
+    color: var(--even_darker_off_white) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .navbarStack {
+        display: none !important;
+    }
+
+    .menuIcon {
+        width: 1.5em;
+        height: 1.5em;
+        display: block !important;
+    }
+}
+
+.navbarNumbers {
+    font-family: 'Courier, New Courier, monospace';
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    color: var(--green);
+}
+
+.navbarNumbersList {
+    font-family: 'Courier, New Courier, monospace';
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    color: var(--green);
+}
+
+.navBarDrawerDiv {
+    width: 180px;
+}
+
+.navBarDrawerDiv:hover {
+    color: var(--green);
+}
+
+.contactSection {
+    border-right: 1px solid var(--darker_off_white) !important;
+}
+
+.resumeWrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    max-width: 140px;
+}
+
+.navListItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    font-size: 2rem;
+    border-top: var(--even_lighter_background) solid 1px;
+    border-bottom: var(--background) solid 1px;
+}
+
+.navListItem:hover {
+    color: var(--green);
+}
+
+#downloadButton {
+    margin-bottom: -1.7px;
+}

@@ -1,0 +1,113 @@
+.aboutMePageWrapper {
+    width: 100%;
+    min-height: 90vh;
+    max-height: fit-content;
+    background-color: var(--lighter_background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.aboutMePage {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutMeCardLeft {
+    width: 60%;
+}
+
+.aboutCardRight {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    aspect-ratio: 2/3;
+    width: 15rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px var(--transparent_background);
+}
+
+.header_sections {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    top: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.num {
+    font-size: 2rem;
+    color: var(--green);
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.text-sections {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-indent: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .aboutMePage {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .aboutMeCardLeft {
+        width: 100%;
+    }
+    .text-sections {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .text-sections {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMePage {
+        width: 80%;
+    }
+
+    .header_sections,
+    .num {
+        font-size: 1.5rem;
+    }
+
+    .text-sections {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .text-sections {
+        font-size: 0.75rem;
+    }
+    .header_sections {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .text-sections {
+        font-size: 1rem;
+    }
+}

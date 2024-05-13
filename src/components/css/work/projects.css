@@ -1,0 +1,121 @@
+.tabPanel {
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: calc(33.33% - 20px);
+    max-width: 390px;
+    min-width: 190px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4 /3;
+    border-radius: 0 !important;
+    border: 0 !important;
+}
+
+.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio without stretching */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7fdfd;
+    opacity: 0;
+    font-size: 1.5rem;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+.stack {
+    background-color: transparent;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}
+
+.text {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+    height: 60%;
+}
+
+#title {
+    color: black;
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#highlight {
+    color: #e31b6d;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .workTabs {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media screen and (max-width: 1169px) {
+    .card-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .card {
+        width: calc(50% - 20px) !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .workTabs {
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .workTabs {
+        font-size: 0.75rem !important;
+    }
+}
