@@ -95,8 +95,8 @@ const cardData = [
             },
         ],
         language: 'React JS / GraphQL',
-        link: 'https://github.com/josephpicardat/Peace-Of-Mind_V2',
-        linkType: 'Repository',
+        link: 'https://peace-of-mind-app-v2.herokuapp.com/',
+        linkType: 'Deployment',
     },
     {
         id: 2,

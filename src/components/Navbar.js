@@ -73,7 +73,11 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     const toggleExpanded = (location) => {
         setExpanded(!expanded);
         setClicked(!clicked);
-        scrollToSection(location);
+        if (location === 'resume') {
+            return;
+        } else {
+            scrollToSection(location);
+        }
     };
 
     return (
@@ -165,7 +169,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
 
             <Box
                 sx={{
-                    height: expanded ? '192px' : '0',
+                    height: expanded ? '256px' : '0',
                     backgroundColor: 'var(--lighter_background)',
                     transition: 'height .3s ease-in-out',
                     position: 'fixed',
@@ -223,6 +227,18 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                         <div className='navBarDrawerDiv'>
                             <span className='navbarNumbersList'>03.</span>
                             Contact
+                        </div>
+                    </ListItem>
+                    <ListItem
+                        onClick={() => toggleExpanded('resume')}
+                        href={resume}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='navListItem'
+                    >
+                        <div className='navBarDrawerDiv'>
+                            <span className='navbarNumbersList'>04.</span>
+                            Resume
                         </div>
                     </ListItem>
                 </List>
