@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import { useSpring, animated } from '@react-spring/web';
-import { useState, forwardRef, cloneElement } from 'react';
+import { useState, forwardRef, cloneElement, useEffect } from 'react';
 import WorkModal from './workModal';
 import '../css/work/projects.css';
 
@@ -61,8 +61,39 @@ function Cards({
     linkType,
 }) {
     const [open, setOpen] = useState(false); // sets whether or not work modal is opened
+    const [isTouchScreen, setIsTouchScreen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    useEffect(() => {
+        const detectTouchScreen = () => {
+            let hasTouchScreen = false;
+
+            if ('maxTouchPoints' in navigator) {
+                hasTouchScreen = navigator.maxTouchPoints > 0;
+            } else if ('msMaxTouchPoints' in navigator) {
+                hasTouchScreen = navigator.msMaxTouchPoints > 0;
+            } else {
+                const mQ =
+                    window.matchMedia && window.matchMedia('(pointer: coarse)');
+                if (mQ && mQ.matches) {
+                    hasTouchScreen = true;
+                } else if ('orientation' in window) {
+                    hasTouchScreen = true; // for iOS (iPad or iPhone)
+                } else {
+                    const userAgent = navigator.userAgent;
+                    hasTouchScreen =
+                        /touch|tablet|ipad|playbook|silk|android|kindle|opera mini|mobile/i.test(
+                            userAgent
+                        );
+                }
+            }
+
+            return hasTouchScreen;
+        };
+
+        setIsTouchScreen(detectTouchScreen());
+    }, []);
 
     const ColorButton = styled(Button)(({ theme }) => ({
         fontFamily: 'Courier New Courier monospace',
@@ -83,15 +114,24 @@ function Cards({
     return (
         <div className='card'>
             <img src={imageSrc} alt={title}></img>
-            <div className='overlay'>
+            <div className={isTouchScreen ? 'noOverlay' : 'overlay'}>
                 <Stack spacing={2} direction='column' className='stack'>
-                    <div className='text'>
+                    <div className={isTouchScreen ? 'touchScreenTrue' : 'text'}>
                         <span id='title'>{title}</span>
                         <span id='highlight'>{language}</span>
                     </div>
-                    <ColorButton variant='outlined' onClick={handleOpen}>
+                    <ColorButton
+                        variant='outlined'
+                        onClick={handleOpen}
+                        className={isTouchScreen ? 'touchScreenTrue' : ''}
+                    >
                         LEARN MORE
                     </ColorButton>
+                    {isTouchScreen ? (
+                        <a className='nonButton' onClick={handleOpen}></a>
+                    ) : (
+                        'none'
+                    )}
                     <Modal
                         aria-labelledby='spring-modal-title'
                         aria-describedby='spring-modal-description'
@@ -106,7 +146,6 @@ function Cards({
                         }}
                     >
                         <Fade in={open}>
-                            {/* open */}
                             <WorkModal
                                 title={title}
                                 subtitle={subtitle}
