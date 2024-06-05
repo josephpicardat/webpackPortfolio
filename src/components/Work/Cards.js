@@ -114,24 +114,9 @@ function Cards({
     return (
         <div className='card'>
             <img src={imageSrc} alt={title}></img>
-            <div className={isTouchScreen ? 'noOverlay' : 'overlay'}>
-                <Stack spacing={2} direction='column' className='stack'>
-                    <div className={isTouchScreen ? 'touchScreenTrue' : 'text'}>
-                        <span id='title'>{title}</span>
-                        <span id='highlight'>{language}</span>
-                    </div>
-                    <ColorButton
-                        variant='outlined'
-                        onClick={handleOpen}
-                        className={isTouchScreen ? 'touchScreenTrue' : ''}
-                    >
-                        LEARN MORE
-                    </ColorButton>
-                    {isTouchScreen ? (
-                        <a className='nonButton' onClick={handleOpen}></a>
-                    ) : (
-                        'none'
-                    )}
+            {isTouchScreen ? (
+                <div className='noOverlay'>
+                    <a className='nonButton' onClick={handleOpen}></a>
                     <Modal
                         aria-labelledby='spring-modal-title'
                         aria-describedby='spring-modal-description'
@@ -157,8 +142,46 @@ function Cards({
                             />
                         </Fade>
                     </Modal>
-                </Stack>
-            </div>
+                </div>
+            ) : (
+                <div className='overlay'>
+                    <Stack spacing={2} direction='column' className='stack'>
+                        <div className='text'>
+                            <span id='title'>{title}</span>
+                            <span id='highlight'>{language}</span>
+                        </div>
+                        <ColorButton variant='outlined' onClick={handleOpen}>
+                            LEARN MORE
+                        </ColorButton>
+
+                        <Modal
+                            aria-labelledby='spring-modal-title'
+                            aria-describedby='spring-modal-description'
+                            open={open}
+                            onClose={handleClose}
+                            closeAfterTransition
+                            slots={{ backdrop: Backdrop }}
+                            slotProps={{
+                                backdrop: {
+                                    TransitionComponent: Fade,
+                                },
+                            }}
+                        >
+                            <Fade in={open}>
+                                <WorkModal
+                                    title={title}
+                                    subtitle={subtitle}
+                                    description={description}
+                                    imageArray={imageArray}
+                                    link={link}
+                                    linkType={linkType}
+                                    onClose={handleModalClose}
+                                />
+                            </Fade>
+                        </Modal>
+                    </Stack>
+                </div>
+            )}
         </div>
     );
 }
