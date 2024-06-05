@@ -230,11 +230,12 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                         </div>
                     </ListItem>
                     <ListItem
-                        onClick={() => toggleExpanded('resume')}
-                        href={resume}
-                        target='_blank'
-                        rel='noreferrer'
                         className='navListItem'
+                        onClick={(e) => {
+                            e.preventDefault(); // Prevent default anchor behavior
+                            window.open(resume, '_blank', 'noreferrer');
+                            toggleExpanded('resume');
+                        }}
                     >
                         <div className='navBarDrawerDiv'>
                             <span className='navbarNumbersList'>04.</span>
