@@ -113,10 +113,20 @@ function Cards({
 
     return (
         <div className='card'>
-            <img src={imageSrc} alt={title}></img>
+            <img
+                src={imageSrc}
+                alt={title}
+                onTouchEnd={isTouchScreen ? handleOpen : 'undefined'}
+            ></img>
             {isTouchScreen ? (
                 <div className='noOverlay'>
-                    <a className='nonButton' onClick={handleOpen}></a>
+                    <a
+                        className='nonButton'
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleOpen();
+                        }}
+                    ></a>
                     <Modal
                         aria-labelledby='spring-modal-title'
                         aria-describedby='spring-modal-description'
