@@ -100,6 +100,7 @@ function Cards({
         color: '#e31b6d',
         border: '2px solid #e31b6d',
         padding: '6px 12px',
+        width: '50%',
         '&:hover': {
             backgroundColor: '#e31b6d',
             color: 'white',
@@ -116,9 +117,9 @@ function Cards({
             <img
                 src={imageSrc}
                 alt={title}
-                onTouchEnd={isTouchScreen ? handleOpen : 'undefined'}
+                // onTouchEnd={isTouchScreen ? handleOpen : 'undefined'}
             ></img>
-            {isTouchScreen ? (
+            {/* {isTouchScreen ? (
                 <div className='noOverlay'>
                     <a
                         className='nonButton'
@@ -152,46 +153,46 @@ function Cards({
                             />
                         </Fade>
                     </Modal>
-                </div>
-            ) : (
-                <div className='overlay'>
-                    <Stack spacing={2} direction='column' className='stack'>
-                        <div className='text'>
-                            <span id='title'>{title}</span>
-                            <span id='highlight'>{language}</span>
-                        </div>
-                        <ColorButton variant='outlined' onClick={handleOpen}>
-                            LEARN MORE
-                        </ColorButton>
+                </div> */}
+            {/* ) : ( */}
+            <div className='overlay'>
+                <Stack spacing={2} direction='column' className='stack'>
+                    <div className='text'>
+                        <span id='title'>{title}</span>
+                        <span id='highlight'>{language}</span>
+                    </div>
+                    <ColorButton variant='outlined' onClick={handleOpen}>
+                        LEARN MORE
+                    </ColorButton>
 
-                        <Modal
-                            aria-labelledby='spring-modal-title'
-                            aria-describedby='spring-modal-description'
-                            open={open}
-                            onClose={handleClose}
-                            closeAfterTransition
-                            slots={{ backdrop: Backdrop }}
-                            slotProps={{
-                                backdrop: {
-                                    TransitionComponent: Fade,
-                                },
-                            }}
-                        >
-                            <Fade in={open}>
-                                <WorkModal
-                                    title={title}
-                                    subtitle={subtitle}
-                                    description={description}
-                                    imageArray={imageArray}
-                                    link={link}
-                                    linkType={linkType}
-                                    onClose={handleModalClose}
-                                />
-                            </Fade>
-                        </Modal>
-                    </Stack>
-                </div>
-            )}
+                    <Modal
+                        aria-labelledby='spring-modal-title'
+                        aria-describedby='spring-modal-description'
+                        open={open}
+                        onClose={handleClose}
+                        closeAfterTransition
+                        slots={{ backdrop: Backdrop }}
+                        slotProps={{
+                            backdrop: {
+                                TransitionComponent: Fade,
+                            },
+                        }}
+                    >
+                        <Fade in={open}>
+                            <WorkModal
+                                title={title}
+                                subtitle={subtitle}
+                                description={description}
+                                imageArray={imageArray}
+                                link={link}
+                                linkType={linkType}
+                                onClose={handleModalClose}
+                            />
+                        </Fade>
+                    </Modal>
+                </Stack>
+            </div>
+            {/* )} */}
         </div>
     );
 }

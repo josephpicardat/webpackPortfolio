@@ -52,6 +52,12 @@ import All_thoughts from '../../assets/SocialNetworkIO/All_thoughts.png';
 import all_users from '../../assets/SocialNetworkIO/all_users.png';
 import create_new_thought from '../../assets/SocialNetworkIO/create_new_thought.png';
 
+// SortingAlgorithm
+import Bubble_Sort from '../../assets/SortingAlgorithm/Bubble_Sort.png';
+import Insertion_Sort from '../../assets/SortingAlgorithm/Insertion_Sort.png';
+import Small_Quick_Sort from '../../assets/SortingAlgorithm/Small_Quick_Sort.png';
+import Wave from '../../assets/SortingAlgorithm/Wave.png';
+
 const cardData = [
     {
         id: 1,
@@ -100,48 +106,35 @@ const cardData = [
     },
     {
         id: 2,
-        title: 'RecipeIO',
-        subtitle: 'Recipe Search Engine',
+        title: 'TarotDeck',
+        subtitle: 'Embrace Clarity: Tarot Card Readings Made Simple',
         description:
-            'Recipe IO is a application that uses mysql2 to store users recipes and recipe books.',
-        image: RecipeIO,
+            'Embark on a journey of reflection and fun with the Tarot Deck app—a digital twist on the ancient practice of tarot readings. Our app offers users a unique opportunity to explore various tarot spreads, delve into the meanings of the cards, and gain personal insights, all with a touch of a button.',
+        image: TarotDeck,
         imageArray: [
             {
-                path: MainMenu,
-                alt: 'Login Page',
+                path: dashboard,
+                alt: 'Dashboard',
             },
             {
-                path: Recipe,
-                alt: 'Recipe Example',
+                path: newReading,
+                alt: 'New Tarot Reading',
+            },
+            {
+                path: reading,
+                alt: 'Previous Readings',
+            },
+            {
+                path: settings,
+                alt: 'Settings Page',
             },
         ],
-        language: 'MYSQL / Handlebars / JS',
-        link: 'https://github.com/josephpicardat/RecipeIO',
+        language: 'GraphQL / AWS / JS / React',
+        link: 'https://github.com/AndreaRene/tarot-application',
         linkType: 'Repository',
     },
     {
         id: 3,
-        title: 'Gifter',
-        subtitle: 'Gift Card Reminder Website',
-        description:
-            'A calendar application that sends gift cards to friends and family. It also a remind app.',
-        image: Gifter,
-        imageArray: [
-            {
-                path: preview,
-                alt: 'Example Reminder',
-            },
-            {
-                path: gifter,
-                alt: 'Main Page',
-            },
-        ],
-        language: 'Javascript',
-        link: 'https://github.com/josephpicardat/gifter',
-        linkType: 'Repository',
-    },
-    {
-        id: 4,
         title: 'FlexBoxIO',
         subtitle: 'A Flexbox Playground',
         description:
@@ -178,34 +171,56 @@ const cardData = [
         linkType: 'Repository',
     },
     {
-        id: 5,
-        title: 'TarotDeck',
-        subtitle: 'Embrace Clarity: Tarot Card Readings Made Simple',
+        id: 4,
+        title: 'Sorting Alogrithm Visualizer',
+        subtitle: 'A simple sorting alogrithm visualizer',
         description:
-            'Embark on a journey of reflection and fun with the Tarot Deck app—a digital twist on the ancient practice of tarot readings. Our app offers users a unique opportunity to explore various tarot spreads, delve into the meanings of the cards, and gain personal insights, all with a touch of a button.',
-        image: TarotDeck,
+            'A Sorting Algorithm Visualizer built with React, designed to visually demonstrate the process of various sorting algorithms, including Bubble Sort, Quick Sort, Merge Sort, Insertion Sort, and Heap Sort. Users can select an algorithm, shuffle the dataset, and watch as the bars representing data elements are sorted in real-time.',
+        image: Insertion_Sort,
         imageArray: [
             {
-                path: dashboard,
-                alt: 'Dashboard',
+                path: Bubble_Sort,
+                alt: 'Bubble Sort',
             },
             {
-                path: newReading,
-                alt: 'New Tarot Reading',
+                path: Insertion_Sort,
+                alt: 'Insertion Sort',
             },
             {
-                path: reading,
-                alt: 'Previous Readings',
+                path: Small_Quick_Sort,
+                alt: 'Small Quick Sort',
             },
             {
-                path: settings,
-                alt: 'Settings Page',
+                path: Wave,
+                alt: 'Wave',
             },
         ],
-        language: 'GraphQL / AWS / JS',
-        link: 'https://github.com/AndreaRene/tarot-application',
+        language: 'React / JS',
+        link: 'https://josephpicardat.github.io/sorting_algorithm_visualizer/',
+        linkType: 'Deployment',
+    },
+    {
+        id: 5,
+        title: 'RecipeIO',
+        subtitle: 'Recipe Search Engine',
+        description:
+            'Recipe IO is a application that uses mysql2 to store users recipes and recipe books.',
+        image: RecipeIO,
+        imageArray: [
+            {
+                path: MainMenu,
+                alt: 'Login Page',
+            },
+            {
+                path: Recipe,
+                alt: 'Recipe Example',
+            },
+        ],
+        language: 'MYSQL / Handlebars / JS',
+        link: 'https://github.com/josephpicardat/RecipeIO',
         linkType: 'Repository',
     },
+
     {
         id: 6,
         title: 'EmployeeIO',
@@ -275,20 +290,41 @@ const cardData = [
     },
     {
         id: 9,
-        title: 'README Generator',
-        subtitle: 'Your Dynamic Documentation Tool',
-        description: `Introducing ReadME Generator, your ultimate solution for generating dynamic and comprehensive README documentation with ease. Whether you are working on an open-source project or collaborating with a team. ReadME Generator simplifies the process of creating, updating, and maintaining README files, ensuring clarity and accessibility for your project's users and contributors.`,
-        image: README_Generator,
+        title: 'Gifter',
+        subtitle: 'Gift Card Reminder Website',
+        description:
+            'A calendar application that sends gift cards to friends and family. It also a remind app.',
+        image: Gifter,
         imageArray: [
             {
-                path: README_Generator,
-                alt: 'ReadME Generator',
+                path: preview,
+                alt: 'Example Reminder',
+            },
+            {
+                path: gifter,
+                alt: 'Main Page',
             },
         ],
-        language: 'Inquirer / JS',
-        link: 'https://github.com/josephpicardat/README-Generator',
+        language: 'Javascript',
+        link: 'https://github.com/josephpicardat/gifter',
         linkType: 'Repository',
     },
+    // {
+    //     id: 9,
+    //     title: 'README Generator',
+    //     subtitle: 'Your Dynamic Documentation Tool',
+    //     description: `Introducing ReadME Generator, your ultimate solution for generating dynamic and comprehensive README documentation with ease. Whether you are working on an open-source project or collaborating with a team. ReadME Generator simplifies the process of creating, updating, and maintaining README files, ensuring clarity and accessibility for your project's users and contributors.`,
+    //     image: README_Generator,
+    //     imageArray: [
+    //         {
+    //             path: README_Generator,
+    //             alt: 'ReadME Generator',
+    //         },
+    //     ],
+    //     language: 'Inquirer / JS',
+    //     link: 'https://github.com/josephpicardat/README-Generator',
+    //     linkType: 'Repository',
+    // },
 ];
 
 export default cardData;
