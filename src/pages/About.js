@@ -11,23 +11,24 @@ const About = () => {
                         <span className='num'>0.1 </span>About Me
                     </h2>
                     <h3 className='text-sections'>
-                        Hi my name is Joseph Picardat and I enjoy adventure such
-                        as scuba diving and the creativity that programming
-                        offers me. Over the years I have been acquainted with
-                        many different genres of academics in my college career
-                        including engineering, computer science, and music
-                        performance. I am an Eagle Scout and love the outdoors
-                        and will take charge in any situation as needed.
+                        Hi my name is Joseph Picardat and I am an aspiring
+                        full-stack software engineer with expertise in
+                        Javascript and its modern libraries and domain skills
+                        like React, Node, and MongoDB. I am confident in my
+                        ability to add value to any project I undertake.
                     </h3>
 
                     <h3 className='text-sections'>
-                        I have experience in a few programing languages
-                        including: Python, MatLab, C++, HTML, CSS, and
-                        Javascript. I am not only acquainted with full-stack
-                        development, but have years of experience with
-                        SolidWorks, 3D printer software, and VCarve Pro. This
-                        includes the understanding and use of CNC machines, 3D
-                        printers, and laser cutters as well.
+                        I have almost a year in complex project development and
+                        I am currently pursuing an AWS certification and a
+                        Bachelor of Arts from the University of Texas at Austin.
+                        As a self-taught developer, I have built several web
+                        applications within a team setting in and outside my
+                        Coding Bootcamp at the University of Texas at Austin.
+                        These projects consisted of many different technologies
+                        and have helped me learn and thrive in a collaborative,
+                        fast-paced environment. I am very confident in my
+                        ability to demonstrate clean, readable code.
                     </h3>
                 </div>
                 <img
