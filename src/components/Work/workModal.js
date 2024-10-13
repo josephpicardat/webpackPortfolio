@@ -48,33 +48,42 @@ const WorkModal = ({
     };
 
     return (
-        <Card sx={style}>
+        <Card
+            sx={style}
+            className='cardStyle'>
             <WorkImages imageArray={imageArray} />
             <CardContent>
                 <div className='titleContainer'>
-                    <Typography gutterBottom variant='h5' component='div'>
+                    <Typography
+                        gutterBottom
+                        variant='h5'
+                        component='div'>
                         {title}
                     </Typography>
                     <Typography
                         gutterBottom
                         variant='subtitle1'
                         component='div'
-                        sx={{ color: '#c0c0c0' }}
-                    >
+                        sx={{ color: '#c0c0c0' }}>
                         {subtitle}
                     </Typography>
-                    <Typography variant='body2' color='text.secondary'>
+                    <Typography
+                        variant='body2'
+                        color='text.secondary'>
                         {description}
                     </Typography>
                 </div>
             </CardContent>
             <CardActions
-                sx={{ display: 'flex', justifyContent: 'space-between' }}
-            >
-                <Button size='small' onClick={handleClick}>
+                sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Button
+                    size='small'
+                    onClick={handleClick}>
                     {linkType}
                 </Button>
-                <Button size='small' onClick={handleClose}>
+                <Button
+                    size='small'
+                    onClick={handleClose}>
                     <CloseIcon />
                 </Button>
             </CardActions>

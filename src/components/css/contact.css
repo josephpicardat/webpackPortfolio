@@ -66,6 +66,9 @@
     .num {
         font-size: 1.5rem;
     }
+    .formStyling {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -76,8 +79,10 @@
         justify-content: center;
         width: 100%;
     }
-
     #submit {
         width: 75%;
+    }
+    .formStyling {
+        width: 100%;
     }
 }

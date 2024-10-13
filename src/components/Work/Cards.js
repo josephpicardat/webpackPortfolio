@@ -35,7 +35,10 @@ const Fade = forwardRef(function Fade(props, ref) {
     });
 
     return (
-        <animated.div ref={ref} style={style} {...other}>
+        <animated.div
+            ref={ref}
+            style={style}
+            {...other}>
             {cloneElement(children, { onClick })}
         </animated.div>
     );
@@ -156,12 +159,17 @@ function Cards({
                 </div> */}
             {/* ) : ( */}
             <div className='overlay'>
-                <Stack spacing={2} direction='column' className='stack'>
+                <Stack
+                    spacing={2}
+                    direction='column'
+                    className='stack'>
                     <div className='text'>
                         <span id='title'>{title}</span>
                         <span id='highlight'>{language}</span>
                     </div>
-                    <ColorButton variant='outlined' onClick={handleOpen}>
+                    <ColorButton
+                        variant='outlined'
+                        onClick={handleOpen}>
                         LEARN MORE
                     </ColorButton>
 
@@ -176,8 +184,7 @@ function Cards({
                             backdrop: {
                                 TransitionComponent: Fade,
                             },
-                        }}
-                    >
+                        }}>
                         <Fade in={open}>
                             <WorkModal
                                 title={title}

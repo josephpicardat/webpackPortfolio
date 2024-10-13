@@ -5,19 +5,20 @@
 
 .cardStyle {
     position: 'absolute';
-    top: '50%';
+    /* top: '50%';
     left: '50%';
-    transform: 'translate(-50%, -50%)';
-    max-width: 700;
+    transform: 'translate(-50%, -50%)'; */
+    /* max-width: 700px; */
     background-color: 'background.paper';
     border-radius: '3px';
     box-shadow: 24;
     padding: 0;
 }
 
-@media screen and (max-width: 1440) {
+@media screen and (max-width: 1440px) {
     .cardStyle {
         /* aspect-ratio: 4/3 !important; */
-        width: 700px !important;
+        width: 90vw !important;
+        max-width: none !important;
     }
 }

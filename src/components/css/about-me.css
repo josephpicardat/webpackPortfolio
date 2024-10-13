@@ -30,7 +30,7 @@
     justify-content: start;
     align-items: start;
     aspect-ratio: 2/3;
-    width: 15rem;
+    width: 20rem;
     border-radius: 8px;
     box-shadow: 0 10px 15px var(--transparent_background);
 }

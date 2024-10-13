@@ -9,8 +9,7 @@ import README_Generator from '../../assets/Readme_Generator.png';
 
 // PeaceofMind imports
 import PeaceofMind from '../../assets/PeaceofMindV2/peaceOfMindv2.png';
-import x43_about from '../../assets/PeaceofMindV2/x43_about.png';
-import x43_post_comment from '../../assets/PeaceofMindV2/x43_post_comment.png';
+import full_about from '../../assets/PeaceofMindV2/full_about.png';
 import full_community from '../../assets/PeaceofMindV2/full_community.png';
 import full_dashboard from '../../assets/PeaceofMindV2/full_dashboard.png';
 import full_landing from '../../assets/PeaceofMindV2/full_landing.png';
@@ -92,11 +91,7 @@ const cardData = [
                 alt: 'Post with comments',
             },
             {
-                path: x43_post_comment,
-                alt: 'Post Comment Page',
-            },
-            {
-                path: x43_about,
+                path: full_about,
                 alt: 'About Page',
             },
         ],

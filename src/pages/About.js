@@ -1,10 +1,12 @@
 import React from 'react';
-import Profile from '../assets/profile_picture.jpeg';
+import Profile from '../assets/profile_picture.png';
 import '../components/css/about-me.css';
 
 const About = () => {
     return (
-        <section className='aboutMePageWrapper' id='about-me'>
+        <section
+            className='aboutMePageWrapper'
+            id='about-me'>
             <div className='aboutMePage'>
                 <div className='homeCardLeft'>
                     <h2 className='header_sections'>
@@ -35,8 +37,7 @@ const About = () => {
                     id='profileImg'
                     alt='profile'
                     src={Profile}
-                    className='aboutCardRight'
-                ></img>
+                    className='aboutCardRight'></img>
             </div>
         </section>
     );

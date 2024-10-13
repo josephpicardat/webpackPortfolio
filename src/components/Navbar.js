@@ -13,7 +13,7 @@ import { styled } from '@mui/material/styles';
 import DownloadIcon from '@mui/icons-material/Download';
 import MenuIcon from '@mui/icons-material/Menu';
 import jpLogo from '../assets/jpLogo.png';
-import resume from '../assets/pdf/resume.pdf';
+import resume from '../assets/pdf/joseph_picardat_resume.pdf';
 import './css/navbar.css';
 
 const Navbar = ({ activeSection, setActiveSection }) => {
@@ -89,17 +89,19 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                     borderBottom: '3px solid',
                     borderBottomColor: 'var(--background)',
                     boxShadow: 'none',
-                }}
-            >
+                }}>
                 <Toolbar>
                     <ColorIconButton
                         size='large'
                         edge='start'
                         // color='inherit'
                         aria-label='logo'
-                        href='#home'
-                    >
-                        <img className='logo' src={jpLogo} alt='logo' />
+                        href='#home'>
+                        <img
+                            className='logo'
+                            src={jpLogo}
+                            alt='logo'
+                        />
                     </ColorIconButton>
                     <Box sx={{ flexGrow: 1 }}></Box>
                     <Stack
@@ -108,16 +110,14 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                         sx={{
                             color: 'var(--off_white)',
                         }}
-                        className='navbarStack'
-                    >
+                        className='navbarStack'>
                         <ColorButton
                             color='inherit'
                             href='#about-me'
                             className={`${
                                 activeSection === 'about-me' ? 'active' : ''
                             }`}
-                            onClick={() => scrollToSection('about-me')}
-                        >
+                            onClick={() => scrollToSection('about-me')}>
                             <span className='navbarNumbers'>01.</span>
                             About Me
                         </ColorButton>
@@ -127,8 +127,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                             className={`${
                                 activeSection === 'pastWork' ? 'active' : ''
                             }`}
-                            onClick={() => scrollToSection('pastWork')}
-                        >
+                            onClick={() => scrollToSection('pastWork')}>
                             <span className='navbarNumbers'>02.</span>
                             Work
                         </ColorButton>
@@ -138,8 +137,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                             className={`contactSection ${
                                 activeSection === 'contact' ? 'active' : ''
                             }`}
-                            onClick={() => scrollToSection('contact')}
-                        >
+                            onClick={() => scrollToSection('contact')}>
                             <span className='navbarNumbers'>03.</span>
                             Contact
                         </ColorButton>
@@ -148,14 +146,12 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                                 color='inherit'
                                 href={resume}
                                 target='_blank'
-                                rel='noreferrer'
-                            >
+                                rel='noreferrer'>
                                 Resume
                             </ColorButton>
                             <ColorButton
                                 href={resume}
-                                download='Joseph_Picardat_Resume.pdf'
-                            >
+                                download='Joseph_Picardat_Resume.pdf'>
                                 <DownloadIcon id='downloadButton' />
                             </ColorButton>
                         </div>
@@ -179,8 +175,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                     width: '100%',
                     textAlign: 'center',
                     overflow: 'hidden',
-                }}
-            >
+                }}>
                 <List
                     sx={{
                         width: '100%',
@@ -190,16 +185,14 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                         alignItems: 'center',
 
                         padding: 0,
-                    }}
-                >
+                    }}>
                     {/* Your navigation links here */}
                     <ListItem
                         onClick={() => toggleExpanded('about-me')}
                         href='#about-me'
                         className={`navListItem ${
                             activeSection === 'about-me' ? 'active' : ''
-                        }`}
-                    >
+                        }`}>
                         <div className='navBarDrawerDiv'>
                             <span className='navbarNumbersList'>01.</span>
                             About Me
@@ -210,8 +203,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                         href='#pastWork'
                         className={`navListItem ${
                             activeSection === 'pastWork' ? 'active' : ''
-                        }`}
-                    >
+                        }`}>
                         <div className='navBarDrawerDiv'>
                             <span className='navbarNumbersList'>02.</span>
                             Work
@@ -222,8 +214,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                         href='#contact'
                         className={`navListItem ${
                             activeSection === 'contact' ? 'active' : ''
-                        }`}
-                    >
+                        }`}>
                         <div className='navBarDrawerDiv'>
                             <span className='navbarNumbersList'>03.</span>
                             Contact
@@ -235,8 +226,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                             e.preventDefault(); // Prevent default anchor behavior
                             window.open(resume, '_blank', 'noreferrer');
                             toggleExpanded('resume');
-                        }}
-                    >
+                        }}>
                         <div className='navBarDrawerDiv'>
                             <span className='navbarNumbersList'>04.</span>
                             Resume
