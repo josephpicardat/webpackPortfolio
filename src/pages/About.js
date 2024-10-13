@@ -21,16 +21,16 @@ const About = () => {
                     </h3>
 
                     <h3 className='text-sections'>
-                        I have almost a year in complex project development and
-                        I am currently pursuing an AWS certification and a
-                        Bachelor of Arts from the University of Texas at Austin.
-                        As a self-taught developer, I have built several web
-                        applications within a team setting in and outside my
-                        Coding Bootcamp at the University of Texas at Austin.
-                        These projects consisted of many different technologies
-                        and have helped me learn and thrive in a collaborative,
-                        fast-paced environment. I am very confident in my
-                        ability to demonstrate clean, readable code.
+                        I have two years of experience in complex project
+                        development and I am currently pursuing an AWS
+                        certification. As a self-taught developer, I have built
+                        several web applications within a team setting in and
+                        outside my Coding Bootcamp at the University of Texas at
+                        Austin. These projects consisted of many different
+                        technologies and have helped me learn and thrive in a
+                        collaborative, fast-paced environment. I am very
+                        confident in my ability to demonstrate clean, readable
+                        code.
                     </h3>
                 </div>
                 <img
