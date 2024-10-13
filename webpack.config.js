@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 module.exports = {
     module: {
         rules: [
@@ -46,6 +48,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',
             filename: './index.html',
+        }),
+        // Copy the CNAME file to the dist/ folder
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'CNAME', to: '' }, // The CNAME file is placed in the root of dist/
+            ],
         }),
     ],
 };
