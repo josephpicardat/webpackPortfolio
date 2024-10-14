@@ -50,14 +50,14 @@ module.exports = {
             filename: './index.html',
         }),
         // Copy the CNAME file to the dist/ folder
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: 'CNAME', to: '' }, // The CNAME file is placed in the root of dist/
-            ],
-        }),
+        // new CopyWebpackPlugin({
+        //     patterns: [
+        //         { from: 'CNAME', to: '' }, // The CNAME file is placed in the root of dist/
+        //     ],
+        // }),
     ],
-    output: {
-        path: path.resolve(__dirname, 'dist'), // Ensures everything goes to the dist folder
-        publicPath: '/',
-    },
+    // output: {
+    //     path: path.resolve(__dirname, 'dist'), // Ensures everything goes to the dist folder
+    //     publicPath: '/',
+    // },
 };
