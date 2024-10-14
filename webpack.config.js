@@ -56,4 +56,8 @@ module.exports = {
             ],
         }),
     ],
+    output: {
+        path: path.resolve(__dirname, 'dist'), // Ensures everything goes to the dist folder
+        publicPath: '/',
+    },
 };
