@@ -138,8 +138,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                             className={`contactSection ${
                                 activeSection === 'contact' ? 'active' : ''
                             }`}
-                            onClick={() => scrollToSection('contact')}
-                            sx={{ borderRadius: '0' }}>
+                            onClick={() => scrollToSection('contact')}>
                             <span className='navbarNumbers'>03.</span>
                             Contact
                         </ColorButton>
@@ -148,7 +147,9 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                                 color='inherit'
                                 href={resume}
                                 target='_blank'
-                                rel='noreferrer'>
+                                rel='noreferrer'
+                                sx={{ padding: '6px 0px 6px 12px' }}>
+                                <span className='navbarNumbers'>04.</span>
                                 Resume
                             </ColorButton>
                             <ColorButton

@@ -52,16 +52,11 @@
     color: var(--green);
 }
 
-.contactSection {
-    border-right: 1px solid var(--darker_off_white) !important;
-}
-
 .resumeWrapper {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
-    max-width: 140px;
     border-right: 1px solid var(--darker_off_white);
 }
 

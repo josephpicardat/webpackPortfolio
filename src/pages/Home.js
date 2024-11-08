@@ -16,14 +16,14 @@ function Home() {
                         Joseph Picardat,
                     </p>
                     <p className='normalText'>
-                        A <span className='highlight'>web designer</span> in the
-                        works who's ready to take on any challenge you hit me
-                        with. I have a certificate for a{' '}
+                        A <span className='highlight'>Software Engineer</span>{' '}
+                        in the works who's ready to take on any challenge you
+                        hit me with. I have a certificate for a{' '}
                         <span className='highlight'>Coding Bootcamp </span>
                         under the <span id='ut'>University of Texas</span> at
-                        Austin banner as well as a Batchlore of Arts degree.
-                        This site is where all of my work is documented, feel
-                        free to look around!
+                        Austin banner as well as a Bachelor of Arts degree. This
+                        site is where all of my work is documented, feel free to
+                        look around!
                     </p>
                 </div>
                 <div className='homeCardRight'>
