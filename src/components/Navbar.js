@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import DownloadIcon from '@mui/icons-material/Download';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 import jpLogo from '../assets/jpLogo.png';
 import resume from '../assets/pdf/joseph_picardat_resume.pdf';
@@ -137,7 +138,8 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                             className={`contactSection ${
                                 activeSection === 'contact' ? 'active' : ''
                             }`}
-                            onClick={() => scrollToSection('contact')}>
+                            onClick={() => scrollToSection('contact')}
+                            sx={{ borderRadius: '0' }}>
                             <span className='navbarNumbers'>03.</span>
                             Contact
                         </ColorButton>
@@ -155,6 +157,15 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                                 <DownloadIcon id='downloadButton' />
                             </ColorButton>
                         </div>
+
+                        <ColorIconButton
+                            color='inherit'
+                            href='https://github.com/josephpicardat'
+                            target='_blank'
+                            rel='noreferrer'
+                            sx={{ marginLeft: '8px !important' }}>
+                            <GitHubIcon />
+                        </ColorIconButton>
                     </Stack>
                     <MenuIcon
                         className={`menuIcon ${clicked ? 'clicked' : ''}`}
