@@ -16,10 +16,11 @@ const CustomTabPanel = (props) => {
             id={`custom-tabpanel-${index}`}
             aria-labelledby={`custom-tab-${index}`}
             {...other}
-            className='tabPanel'
-        >
+            className='tabPanel'>
             {value === index && (
-                <Box sx={{ p: 3 }} className='card-container'>
+                <Box
+                    sx={{ p: 3 }}
+                    className='card-container'>
                     {outside.map((card) => (
                         <Cards
                             key={card.id}
@@ -31,7 +32,12 @@ const CustomTabPanel = (props) => {
                             language={card.language}
                             link={card.link}
                             linkType={card.linkType}
-                        ></Cards>
+                            video={card.video}
+                            role={card.role}
+                            what={card.what}
+                            completed={card.completed}
+                            favorited={card.favorited}
+                            index={card.id}></Cards>
                     ))}
                 </Box>
             )}
@@ -61,14 +67,29 @@ const Projects = () => {
 
     CardData.forEach((card) => {
         if (card.language.includes('React')) {
-            tabs[1].content.push(<Cards key={card.id} {...card} />);
+            tabs[1].content.push(
+                <Cards
+                    key={card.id}
+                    {...card}
+                />
+            );
         } else if (
             card.language.includes('Javascript') ||
             card.language.includes('JS')
         ) {
-            tabs[2].content.push(<Cards key={card.id} {...card} />);
+            tabs[2].content.push(
+                <Cards
+                    key={card.id}
+                    {...card}
+                />
+            );
         }
-        tabs[0].content.push(<Cards key={card.id} {...card} />);
+        tabs[0].content.push(
+            <Cards
+                key={card.id}
+                {...card}
+            />
+        );
     });
 
     const StyledTabs = styled((props) => (
@@ -93,18 +114,18 @@ const Projects = () => {
 
     return (
         <div className='card-container'>
-            <Box sx={{ width: '100%' }} className='tabBox'>
+            <Box
+                sx={{ width: '100%' }}
+                className='tabBox'>
                 <Box
                     sx={{
                         borderColor: 'divider',
-                    }}
-                >
+                    }}>
                     <StyledTabs
                         value={value}
                         onChange={handleChange}
                         aria-label='card tabs'
-                        centered
-                    >
+                        centered>
                         {tabs.map((tab, index) => (
                             <Tab
                                 key={index}
@@ -130,7 +151,10 @@ const Projects = () => {
                     </StyledTabs>
                 </Box>
                 {tabs.map((tab, index) => (
-                    <CustomTabPanel key={index} value={value} index={index}>
+                    <CustomTabPanel
+                        key={index}
+                        value={value}
+                        index={index}>
                         {tab.content.length > 0 ? (
                             tab.content
                         ) : (

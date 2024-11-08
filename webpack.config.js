@@ -42,6 +42,14 @@ module.exports = {
                     },
                 ],
             },
+            // Rule for video files
+            {
+                test: /\.(mp4|webm|ogg)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'videos/[hash][ext][query]',
+                },
+            },
         ],
     },
     plugins: [
