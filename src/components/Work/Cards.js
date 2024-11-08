@@ -232,7 +232,7 @@ function Cards({
                     </Typography>
                     <Typography
                         variant='body2'
-                        sx={{ color: completed ? 'green' : 'red' }}>
+                        sx={{ color: completed ? '#11ffa8' : '#e31b6d' }}>
                         {completed ? 'Completed' : 'In Progress'}
                     </Typography>
                     <Typography
