@@ -83,7 +83,7 @@ const cardData = [
             'Embark on a journey of reflection and fun with the Tarot Deck app—a digital twist on the ancient practice of tarot readings. Our app offers users a unique opportunity to explore various tarot spreads, delve into the meanings of the cards, and gain personal insights, all with a touch of a button.',
         image: tarot_deck_main,
         role: 'Co-Founder',
-        what: 'As a Co-Founder of Tarot Deck, a tarot reading app, I lead backend development and integrate technologies such as React, Vue.js, and GraphQL. I have contributed to approximately one-third of the project while playing a key role in project management and overall direction.',
+        what: 'As a Software Engineer at ThirdStack Solution I worked on a tarot reading app. I lead backend development and integrate technologies such as React, Vue.js, and GraphQL. I have contributed to approximately one-third of the project while playing a key role in project management and overall direction.',
         completed: false,
         favorited: true,
         imageArray: [
